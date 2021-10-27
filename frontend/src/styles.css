@@ -1,0 +1,106 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+} */
+
+@import '~codemirror/lib/codemirror.css';
+@import '~codemirror/theme/material.css';
+@import '~codemirror/theme/darcula.css';
+@import '~codemirror/lib/codemirror';
+@import '~codemirror/theme/material';
+@import '~codemirror/theme/darcula';
+
+
+/* @import '../node_modules/codemirror/lib/codemirror.css';
+@import '../node_modules/codemirror/theme/material.css';
+@import '../node_modules/codemirror/theme/darcula.css'; */
+
+.ngx-codemirror{
+    height: 550px; 
+    width: 100%; 
+    left:0%; 
+    position:relative;
+}
+
+.ngx-codemirror {
+    border: 1px solid #ccc;
+  }
+  
+
+.CodeMirror, .cm-s-material{
+    height: 550px; 
+    width: 100%; 
+    left:0%; 
+    position:relative;
+}
+
+#boton-nav {
+    /* margin: 1rem; */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+#myCarousel {
+    /* margin: 1rem; */
+    /* padding: 1rem; */
+}
+
+#text-code {
+    height: 500px; 
+    width: 100%; 
+    left:0%; 
+    position:relative;
+}
+
+#myCarousel {
+    width: 60%; 
+    left:20%; 
+    position:relative;
+}
+
+#barra-code {
+    width: 60%; 
+    left:20%; 
+    position:relative;
+}
+
+#boton-nav {
+    width: 60%; 
+    left:20%; 
+    position:relative;
+}
+
+#bar-code {
+    width: 33.3%;
+    background: red;
+}
+
+#bar-code2 {
+    width: 33.3%;
+    background: dodgerblue;
+}
+
+#bar-code3 {
+    width: 33.4%;
+    background: dodgerblue;
+}
+
+#button-compile {
+    background: #1100FF;
+}
+
+#button-run {
+    background: #00B242;
+}
+
+.option-code {
+    width: 60%; 
+    left:20%; 
+    margin: 1rem;
+    /* padding: 1rem; */
+    text-align: center;
+    position:relative;
+}

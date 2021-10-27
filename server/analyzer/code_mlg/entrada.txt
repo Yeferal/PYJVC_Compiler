@@ -1,0 +1,117 @@
+paquete com.p1.p
+package com.p2.p.p1
+paquete com.p3..*
+
+%%PY
+
+	def funcion1(lista):
+		num = -5*-5*(-5/8+(-5))
+        lista = true
+		lis = "hola como te llamas"
+		l = 'd'
+		for num in range(5):
+			if lista:
+				println("Entron")
+			
+		while lista == false:
+			input()
+		
+	def funcion1(lista):
+		lista = true
+		lis = "hola como te llamas"
+		l = 'd'
+		for num in range(5):
+			if lista:
+				println("Entron")
+			
+		while lista == false:
+			input()
+		
+	
+
+%%JAVA
+
+public class Juego extends saludo{
+    public int v1 = 0;
+    public String v3= 2;
+    public float v4 = 5;
+
+    Juego(){
+        this.v1 = 5;
+    }
+
+    public void forS(){
+        for(int i = 0; i<10; i++){
+            v1 = v4;
+        }
+    }
+
+    public int whileS(){
+        while(v1!=10){
+            v1 = 10;
+        }
+        return 10;
+    }
+
+    public int doWhile(){
+        do{
+            v1 = 10;
+            v2 = intinput();
+        }
+        while(v1!=10);
+        return 10;
+    }
+
+    private void ifS(){
+        if(v1==10){
+            v1 = 10;
+            v2 = intinput();
+        }else if(v1<=5){
+            v1 = 10;
+            v2 = intinput();
+        }else{
+            v2 = intinput();
+        }
+    }
+
+    public void switchS(){
+        switch(v1){
+            case 1:
+                v1 = 10;
+                break;
+            case 2:
+                v1 = 10;
+                break;
+            default:
+                v1 = 10;
+        }
+    }
+
+
+}
+
+%%PROGRAMA
+Sección de librerías de C //opcionales
+#include "PY" //incluye el código en Python
+#include "PY.dir_a_paquete.archivo" //incluye el código en Python definido en el archivo ‘archivo’.
+#include "JAVA.*" //incluye todas las clases declaradas en
+
+//la sección de Java
+#include "JAVA.nombre" //incluye una clase en especifico
+
+//declarada en la sección de Java
+#include "JAVA.dir_a_paquete.nombre" //incluye una clase existente en el paquete dir_a_paquete
+#include "JAVA.dir_a_paquete.*" //incluye todas las clases existente en el paquete dir_a_paquete
+// no hay orden en las instrucciones de la seccion de librerias
+
+Sección declaración de Constantes
+const int val = 5;
+const int val = true;
+
+Sección de Variables Globales
+int arreglo [4*d+5][4];
+char d = 'd';
+
+void main (){
+
+}

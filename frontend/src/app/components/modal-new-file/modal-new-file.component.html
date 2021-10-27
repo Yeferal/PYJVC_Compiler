@@ -1,0 +1,32 @@
+
+<ng-template #content let-modal>
+    <div class="modal-body">
+        <div class="block-center msj-error">
+        <!-- {{msjExistProject}} -->
+        </div>
+        <form class=" validate-form" [formGroup]="openProjectForm" >
+            <label for="exampleFormControlSelect1"></label>
+            <label for="exampleFormControlSelect1">Selecciona el Proyecto</label>
+            <select class="form-control" id="exampleFormControlSelect1" 
+            formControlName="namePro" required>
+            <option disabled="disabled" [selected]="true">Selecciona un proyecto</option>
+            <!-- <option [selected]="true">{{rutaProject}}</option> -->
+                <option 
+                *ngFor="let elemento of listaProjects; let i = index">
+                {{elemento.name}}
+                </option>
+              </select>  
+            <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Nombre del Archivo:</label>
+                <input type="text" class="form-control" id="recipient-name" name="name" 
+                formControlName="name" placeholder="Ingresa el nombre del Archivo" required>
+            </div>      
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="modal.dismiss('Cross click')">Cancelar</button>
+                <button class="btn btn-primary" (click)="createFile()" >Crear Archivo</button>
+            </div>
+        </form>
+    </div>
+  </ng-template>
+  
+  <a class="dropdown-item" href="#" (click)="open(content)" type="file" >Nuevo archivo</a>

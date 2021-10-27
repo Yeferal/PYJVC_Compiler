@@ -1,0 +1,36 @@
+
+
+.msj-error {
+    color: red;
+    align-items: center;
+    align-content: center;
+    text-align-last: center;
+}
+
+.txt1 {
+    font-family: Poppins-Regular;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #999999;
+  }
+  
+  .txt2 {
+    font-family: Poppins-Regular;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #666666;
+  }
+  
+  .txt-1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666666;
+  }
+
+  .txt-2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #000000;
+  }

@@ -1,0 +1,24 @@
+
+
+<ng-template #content let-modal>
+    <div class="modal-body">
+        <div class="block-center msj-error">
+        {{msjExistProject}}
+        </div>
+        <form #createProjectForm="ngForm" (ngSubmit)="createProject(createProjectForm)" >
+            <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Nombre del Proyecto:</label>
+                <input type="text" class="form-control" id="recipient-name" name="name" 
+                #name="ngModel" [(ngModel)]="filesOptService.selectedProject.name"  
+                placeholder="Ingresa el nombre del proyecto" required>
+            </div>
+        
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="modal.dismiss('Cross click')">Cancelar</button>
+                <button class="btn btn-primary">Crear Proyecto</button>
+            </div>
+        </form>
+    </div>
+  </ng-template>
+  
+  <a class="dropdown-item" href="#" (click)="open(content)" type="file" >Nuevo proyecto</a>

@@ -1,0 +1,26 @@
+
+
+<ng-template #content let-modal>
+    <div class="modal-body">
+        <div class="block-center msj-error">
+        <!-- {{msjExistProject}} -->
+        </div>
+        <form class=" validate-form" [formGroup]="openProjectForm" >
+            <label for="exampleFormControlSelect1">Selecciona el Proyecto</label>
+            <select class="form-control" id="exampleFormControlSelect1" 
+            formControlName="name" required>
+            <option disabled="disabled" [selected]="true">Selecciona un proyecto</option>
+                <option 
+                *ngFor="let elemento of listaProjects; let i = index">
+                {{elemento}}
+                </option>
+              </select>        
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="modal.dismiss('Cross click')">Cancelar</button>
+                <button class="btn btn-primary" (click)="openProject()" >Abrir Proyecto</button>
+            </div>
+        </form>
+    </div>
+  </ng-template>
+  
+  <a class="dropdown-item" href="#" (click)="open(content)" type="file" >Abrir proyecto</a>

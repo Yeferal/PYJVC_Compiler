@@ -1,0 +1,7 @@
+<libreria>
+	<proyecto nombre="prueba">
+		<archivo path="entrada1.mlg">entrada1</archivo>
+		<archivo path="entrada2.mlg">entrada2</archivo>
+		<archivo path="entrada3.mlg">entrada3</archivo>
+	</proyecto>
+</libreria>

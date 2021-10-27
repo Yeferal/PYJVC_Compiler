@@ -1,0 +1,87 @@
+<!-- Div para el nav, donde va llevar los menus -->
+<div>
+    <div></div>
+    <div class="">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <!-- Navbar content -->
+            <a class="navbar-brand" href="/">PYJVC</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                <ul class="navbar-nav justify-content-center">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Archivo
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <app-modal-opt></app-modal-opt>
+                            <!-- <a class="dropdown-item" href="#" (click)="getData()" type="file" >Nuevo proyecto</a> -->
+                            <a class="dropdown-item" href="#" (click)="open(content)" >Nuevo archivo</a>
+                            <a class="dropdown-item" href="#" (click)="openProject()" >Abrir proyecto</a>
+                            <a class="dropdown-item" href="#" (click)="openFile()" >Abrir archivo</a>
+                            <a class="dropdown-item" href="#" (click)="save()" >Guardar</a>
+                            <a class="dropdown-item" href="#" (click)="saveAs()" >Guardar Como</a>
+                            <a class="dropdown-item" href="#" (click)="closeProject()" >Cerrar proyecto</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Generar código
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#" (click)="generateCode3D()" >Código en Tres Direcciones</a>
+                        <a class="dropdown-item" href="#" (click)="generateCodeOptimised()" >Código Optimizado</a>
+                        <a class="dropdown-item" href="#" (click)="generateCodeASM()" >Código Assembler</a>
+                        <a class="dropdown-item" href="#" (click)="getData()" >Errores</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Descargar
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#" (click)="downloadCode3D()" >Código en Tres Direcciones</a>
+                        <a class="dropdown-item" href="#" (click)="downloadCodeOptimized()" >Código Optimizado</a>
+                        <a class="dropdown-item" href="#" (click)="downloadCodeASM()" >Código Assembler</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" (click)="getData()" >Reporte</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div></div>
+</div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-body">
+        <form>
+            <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Nombre del Proyecto:</label>
+            <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <hr>
+            <div class="mb-3">
+                <label for="message-text" class="col-form-label">Ruta Proyecto:</label>
+                <input type="file" class="form-control" id="ctrl" webkitdirectory multiple/>
+            </div>
+            <hr>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="getData()">Crear</button>
+    </div>
+  </ng-template>
